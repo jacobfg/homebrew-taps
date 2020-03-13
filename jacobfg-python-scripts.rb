@@ -2,7 +2,7 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '8'
+  version '9'
 
   desc "Python-based, generic static web site generator aimed at developers"
   # add :revision or tag ?
@@ -32,6 +32,7 @@ class JacobfgPythonScripts < Formula
     system "#{bin}/httpdecode"
     system "#{bin}/httpencode"
     system "#{bin}/totp"
+    system "#{bin}/getawsaccount"
     # assert_match "topics", shell_output("#{bin}/aws help")
   end
 
