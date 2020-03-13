@@ -20,7 +20,7 @@ class JacobfgPythonScripts < Formula
     venv = virtualenv_create(libexec, "python3")
     system libexec/"bin/pip", "install", "-v", "-r", "requirements.txt",
                               "--ignore-installed", buildpath
-    # system libexec/"bin/pip", "uninstall", "-y", "awscreds"
+    system libexec/"bin/pip", "uninstall", "-y", "python-scripts"
     venv.pip_install_and_link buildpath
     # pkgshare.install "awscli/examples"
  
