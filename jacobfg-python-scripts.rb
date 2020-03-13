@@ -2,7 +2,7 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '7'
+  version '8'
 
   desc "Python-based, generic static web site generator aimed at developers"
   # add :revision or tag ?
