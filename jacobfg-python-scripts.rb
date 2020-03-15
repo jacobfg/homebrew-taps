@@ -28,11 +28,9 @@ class JacobfgPythonScripts < Formula
 
   # TODO: Add your package's tests here
   test do
-    system "#{bin}/awscreds"
     system "#{bin}/httpdecode"
     system "#{bin}/httpencode"
     system "#{bin}/totp"
-    system "#{bin}/getawsaccount"
     # assert_match "topics", shell_output("#{bin}/aws help")
   end
 
