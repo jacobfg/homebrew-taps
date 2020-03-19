@@ -1,14 +1,15 @@
+require_relative './lib/download_strategy.rb'
+
 class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '9'
+  version '0.0.1'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  # add :revision or tag ?
-  url "git@github.com:jacobfg/python-scripts.git", :using => :git
-  # sha256 "1d7e241b431e7afce47e77f8843a276f652699d1fa4f93b9d8ce0076fd7b0b54"
-  # head "git@github.com:jacobfg/python-scripts.git", :using => :git, :branch => "develop"
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.1.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "c4f5d249fcb90d9c492748ed68f6950912badaa6252931f9c948b7662c6dd5b0"
+  head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
   #       bottle block here.
@@ -23,7 +24,6 @@ class JacobfgPythonScripts < Formula
     system libexec/"bin/pip", "uninstall", "-y", "python-scripts"
     venv.pip_install_and_link buildpath
     # pkgshare.install "awscli/examples"
- 
   end
 
   # TODO: Add your package's tests here
@@ -40,7 +40,4 @@ class JacobfgPythonScripts < Formula
   # EOS
   # end
 
-  # test do
-  #   assert_match "topics", shell_output("#{bin}/aws help")
-  # end
 end
