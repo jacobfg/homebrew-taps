@@ -3,11 +3,12 @@ require_relative './lib/download_strategy.rb'
 class JacobfgBrewScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/727e697833ac570cdac25da98490832f"
-  version "1"
+  version "2"
 
   desc "Additional homebrew scripts"
-  url "https://gist.github.com/jacobfg/727e697833ac570cdac25da98490832f/archive/ceddffd630019aaa33c67d4f606cabb6d23d6492.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "78ab19fff82c8b55872117247d0cf09d415c3e45e230d53e480b9bb1fb648e27"
+  url "https://gist.github.com/jacobfg/727e697833ac570cdac25da98490832f/archive/9280aa6ae799ae7d336e5ea2fc49d5d8cf4c68da.zip"
+  # , :using => GitHubPrivateGistDownloadStrategy
+  sha256 "52f12546ea7f7823167f8a573de2c8420152219c5b797f3ac8f5234213bd807c"
 
   def install
     bin.install "brew-purge"
