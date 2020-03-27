@@ -16,12 +16,12 @@ class JacobfgLaptopDomain < Formula
   depends_on 'jacobfg-gpg-scripts'
   depends_on 'jacobfg-python-scripts'
 
-  def install
-    # bin.install "gpg-switch-card"
-  end
+  # def install
+  #   # bin.install "gpg-switch-card"
+  # end
 
-  test do
-    # system "#{bin}/gpg-switch-card"
-  end
+  # test do
+  #   # system "#{bin}/gpg-switch-card"
+  # end
 
 end
