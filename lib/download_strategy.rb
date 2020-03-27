@@ -87,10 +87,15 @@ end
 
 
 
-class NullDownloadStrategy < CurlDownloadStrategyAbstractDownloadStrategy
+class NullDownloadStrategy < CurlDownloadStrategy
 
   def initialize(url, name, version, **meta)
     super
+  end
+
+  def fetch
+    File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
+  end
   end
 
   def stage
@@ -98,8 +103,8 @@ class NullDownloadStrategy < CurlDownloadStrategyAbstractDownloadStrategy
 
   private
 
-  def _fetch(url:, resolved_url:)
-    File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
-  end
+  # def _fetch(url:, resolved_url:)
+  #   # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
+  # end
 
 end
