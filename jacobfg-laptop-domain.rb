@@ -8,7 +8,7 @@ class JacobfgLaptopDomain < Formula
   desc "Stub package to pull in my other packages"
 
   if OS.mac?
-    url "empty.tar", :using => NullDownloadStrategy
+    url "empty.tar", :using => NullDownloadStrategy, using => :nounzip
     sha256 "84ff92691f909a05b224e1c56abb4864f01b4f8e3c854e4bb4c7baf1d3f6d652"
   # elsif OS.linux?
   #   url "file:///dev/null"
