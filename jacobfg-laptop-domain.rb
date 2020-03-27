@@ -1,5 +1,4 @@
 class JacobfgLaptopDomain < Formula
-  include Language::Python::Virtualenv
 
   homepage 'https://gist.github.com/jacobfg/48315242531a5bed49064119df8b2ee9'
   version '0.0.1'
@@ -9,19 +8,11 @@ class JacobfgLaptopDomain < Formula
   sha256 "97a36b5a67007f652544f6aa20dbb5cf520b350f3a27c29cb01821928216f54f"
  
   depends_on :arch => :x86_64
-  depends_on :arch => :x86_64
 
   depends_on 'jacobfg-awscreds'
   depends_on 'jacobfg-brew-scripts'
   depends_on 'jacobfg-gpg-scripts'
   depends_on 'jacobfg-python-scripts'
 
-  # def install
-  #   # bin.install "gpg-switch-card"
-  # end
-
-  # test do
-  #   # system "#{bin}/gpg-switch-card"
-  # end
 
 end
