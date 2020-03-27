@@ -1,20 +1,14 @@
-require_relative './lib/download_strategy.rb'
-
 class JacobfgLaptopDomain < Formula
   include Language::Python::Virtualenv
 
-  homepage 'https://github.com/jacobfg/homebrew-taps'
+  homepage 'https://gist.github.com/jacobfg/48315242531a5bed49064119df8b2ee9'
   version '0.0.1'
   desc "Stub package to pull in my other packages"
 
-  if OS.mac?
-    url "empty.tar", :using => NullDownloadStrategy, using => :nounzip
-    sha256 "84ff92691f909a05b224e1c56abb4864f01b4f8e3c854e4bb4c7baf1d3f6d652"
-  # elsif OS.linux?
-  #   url "file:///dev/null"
-  #   sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  end
-
+  url "https://gist.github.com/jacobfg/48315242531a5bed49064119df8b2ee9/archive/631d18045b27884471f003dd84f39851dc215f73.zip"
+  sha256 "97a36b5a67007f652544f6aa20dbb5cf520b350f3a27c29cb01821928216f54f"
+ 
+  depends_on :arch => :x86_64
   depends_on :arch => :x86_64
 
   depends_on 'jacobfg-awscreds'
