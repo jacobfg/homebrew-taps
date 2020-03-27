@@ -94,6 +94,7 @@ class NullDownloadStrategy < AbstractFileDownloadStrategy
   end
 
   def fetch
+    # hack to creates an empty tar file
     # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
   end
 
