@@ -15,7 +15,7 @@ class JacobfgLaptopDomain < Formula
   depends_on 'jacobfg-python-scripts'
 
   def install
-    (bin+"_laptop").write <<-EOS.undent
+    (bin+"_laptop").write <<~EOS
         #!/bin/sh
 
         echo Laptop dependancies via Homebrew
