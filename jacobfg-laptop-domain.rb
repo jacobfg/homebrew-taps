@@ -14,5 +14,12 @@ class JacobfgLaptopDomain < Formula
   depends_on 'jacobfg-gpg-scripts'
   depends_on 'jacobfg-python-scripts'
 
+  def install
+    system "touch", "README.md" 
+  end
+
+  # test do
+  #   # system "#{bin}/gpg-switch-card"
+  # end
 
 end
