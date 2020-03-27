@@ -15,7 +15,11 @@ class JacobfgLaptopDomain < Formula
   depends_on 'jacobfg-python-scripts'
 
   def install
-    system "touch", "README.md" 
+    (bin+"_laptop").write <<-EOS.undent
+        #!/bin/sh
+
+        echo Laptop dependancies via Homebrew
+    EOS
   end
 
   # test do
