@@ -6,7 +6,7 @@ class JacobfgLaptopDomain < Formula
   desc "Stub package to pull in my other packages"
 
   if OS.mac?
-    url "file:///dev/null"
+    url "file:///dev/null", :using => NullDownloadStrategy
     sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   # elsif OS.linux?
   #   url "file:///dev/null"

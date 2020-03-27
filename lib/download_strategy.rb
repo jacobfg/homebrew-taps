@@ -84,3 +84,24 @@ class GitHubPrivateGistDownloadStrategy < GitHubPrivateRepositoryDownloadStrateg
   end
 
 end 
+
+
+
+class NullDownloadStrategy < CurlDownloadStrategy
+
+  def initialize(url, name, version, **meta)
+    super
+  end
+
+
+  def download_url
+    "https://#{@github_token}@github.com/#{@owner}/#{@repo}/#{@filepath}"
+  end
+
+  private
+
+  def _fetch(url:, resolved_url:)
+    File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
+  end
+
+end
