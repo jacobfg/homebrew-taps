@@ -6,11 +6,8 @@ class JacobfgLaptopDomain < Formula
   version '0.0.1'
   desc "Stub package to pull in my other packages"
 
-  # url "https://gist.github.com/jacobfg/48315242531a5bed49064119df8b2ee9/archive/631d18045b27884471f003dd84f39851dc215f73.zip"
-  # sha256 "97a36b5a67007f652544f6aa20dbb5cf520b350f3a27c29cb01821928216f54f"
-
-  url "empty.tar", :using => NullDownloadStrategy
-  sha256 "84ff92691f909a05b224e1c56abb4864f01b4f8e3c854e4bb4c7baf1d3f6d652"
+  url "empty", :using => NullDownloadStrategy
+  # sha256 "84ff92691f909a05b224e1c56abb4864f01b4f8e3c854e4bb4c7baf1d3f6d652"
  
   depends_on :arch => :x86_64
 

@@ -99,7 +99,7 @@ class NullDownloadStrategy < CurlDownloadStrategy
   private
 
   def _fetch(url:, resolved_url:)
-    File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
+    # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
   end
 
 end
