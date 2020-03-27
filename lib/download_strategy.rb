@@ -87,7 +87,7 @@ end
 
 
 
-class NullDownloadStrategy < CurlDownloadStrategy
+class NullDownloadStrategy < AbstractDownloadStrategy
 
   def initialize(url, name, version, **meta)
     super
