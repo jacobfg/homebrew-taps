@@ -8,13 +8,10 @@ class JacobfgLaptopDomain < Formula
 
   url "empty", :using => NullDownloadStrategy
 
-  depends_on :macos => '>= 10.14'
-  depends_on :arch => :x86_64
-
-  depends_on :forumla => 'jacobfg-awscreds'
-  depends_on :forumla => 'jacobfg-brew-scripts'
-  depends_on :forumla => 'jacobfg-gpg-scripts'
-  depends_on :forumla => 'jacobfg-python-scripts'
+  depends_on 'jacobfg-awscreds'
+  depends_on 'jacobfg-brew-scripts'
+  depends_on 'jacobfg-gpg-scripts'
+  depends_on 'jacobfg-python-scripts'
 
   def install
     (bin+"_laptop").write <<~EOS
@@ -23,9 +20,5 @@ class JacobfgLaptopDomain < Formula
         echo Laptop dependancies via Homebrew
     EOS
   end
-
-  # test do
-  #   # system "#{bin}/gpg-switch-card"
-  # end
 
 end

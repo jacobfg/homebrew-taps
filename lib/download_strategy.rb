@@ -89,9 +89,9 @@ end
 
 class NullDownloadStrategy < AbstractFileDownloadStrategy
 
-  def initialize(url, name, version, **meta)
-    super
-  end
+  # def initialize(url, name, version, **meta)
+  #   super
+  # end
 
   def fetch
     # hack to creates an empty tar file
