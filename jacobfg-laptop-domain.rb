@@ -1,3 +1,5 @@
+require_relative './lib/download_strategy.rb'
+
 class JacobfgLaptopDomain < Formula
   include Language::Python::Virtualenv
 
