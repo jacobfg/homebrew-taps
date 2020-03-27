@@ -93,11 +93,6 @@ class NullDownloadStrategy < CurlDownloadStrategy
     super
   end
 
-
-  def download_url
-    "https://#{@github_token}@github.com/#{@owner}/#{@repo}/#{@filepath}"
-  end
-
   private
 
   def _fetch(url:, resolved_url:)
