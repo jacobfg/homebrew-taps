@@ -10,7 +10,7 @@ class JacobfgLaptopDomain < Formula
   # sha256 "97a36b5a67007f652544f6aa20dbb5cf520b350f3a27c29cb01821928216f54f"
 
   url "empty.tar", :using => NullDownloadStrategy
-  sha256 "97a36b5a67007f652544f6aa20dbb5cf520b350f3a27c29cb01821928216f54f"
+  sha256 "84ff92691f909a05b224e1c56abb4864f01b4f8e3c854e4bb4c7baf1d3f6d652"
  
   depends_on :arch => :x86_64
 
