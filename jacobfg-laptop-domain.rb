@@ -1,3 +1,5 @@
+require_relative './lib/download_strategy.rb'
+
 class JacobfgLaptopDomain < Formula
 
   homepage 'https://gist.github.com/jacobfg/48315242531a5bed49064119df8b2ee9'
