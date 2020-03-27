@@ -96,12 +96,11 @@ class NullDownloadStrategy < CurlDownloadStrategy
   def fetch
     File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
   end
-  end
 
   def stage
   end
 
-  private
+  # private
 
   # def _fetch(url:, resolved_url:)
   #   # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
