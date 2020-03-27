@@ -94,16 +94,10 @@ class NullDownloadStrategy < AbstractFileDownloadStrategy
   end
 
   def fetch
-    File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
+    # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
   end
 
   def stage
   end
-
-  # private
-
-  # def _fetch(url:, resolved_url:)
-  #   # File.open(temporary_path, 'w') { |file| file.write("\0" * 10240) }
-  # end
 
 end
