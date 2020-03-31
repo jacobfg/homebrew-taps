@@ -1,8 +1,10 @@
 class PassYaml < Formula
     desc "The Pass extension for outputting YAML format"
     homepage "https://github.com/jacobfg/pass-yaml#readme"
-    url "https://github.com/jacobfg/pass-yaml/archive/develop.zip"
-    sha256 "41d405a76a0c56a8aa4c9db7272eeaca7d1ef2394034db53db7c7e75e70c07bd"
+    # url "https://github.com/jacobfg/pass-yaml/archive/develop.zip"
+    url "https://github.com/jacobfg/pass-yaml/archive/b7e4fe75f828c37422d06e3d431a7ebbe40cbeb1.zip"
+    sha256 "1ec9022672d3a215a04e9dc24ef1ff67ea875a2faba8df4f888dd45814058433"
+    version "0.0.1"
   
     # bottle do
     #   cellar :any_skip_relocation
@@ -21,7 +23,7 @@ class PassYaml < Formula
       system "make", "PREFIX=#{prefix}", "BASHCOMPDIR=#{bash_completion}", "install"
     end
   
-    test do
+    # test do
     #   (testpath/"batch.gpg").write <<~EOS
     #     Key-Type: RSA
     #     Key-Length: 2048
@@ -45,5 +47,5 @@ class PassYaml < Formula
     #   ensure
     #     system Formula["gnupg"].opt_bin/"gpgconf", "--kill", "gpg-agent"
     #   end
-    end
+    # end
   end
