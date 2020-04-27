@@ -16,7 +16,7 @@ class PassYaml < Formula
     # end
   
     depends_on "gnupg" => :test
-    # depends_on "oath-toolkit"
+    depends_on "oath-toolkit"
     depends_on "pass"
   
     def install
