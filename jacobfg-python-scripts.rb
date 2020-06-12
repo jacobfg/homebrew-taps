@@ -4,18 +4,17 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '0.0.2'
+  version '0.0.4'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/0.0.3.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "4e44f4abd8dbf31c37c8bbc854d6eda758611410d4734f752768ac281481577f"
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.4.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "01aebcb090f5d4db9ecb9a3aebf0a9e468bc89d1518fbf6a7c7346c577fa955a"
   head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
   #       bottle block here.
 
   depends_on 'python'
-  depends_on 'saml2aws'
  
   def install
     venv = virtualenv_create(libexec, "python3")
