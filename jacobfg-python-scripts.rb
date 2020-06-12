@@ -7,8 +7,8 @@ class JacobfgPythonScripts < Formula
   version '0.0.2'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/0.0.2.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "25f9a24d7ba40425df991f3b04a94cef28b4d8af46889ab3216a560ac7a5880e"
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.3.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "4e44f4abd8dbf31c37c8bbc854d6eda758611410d4734f752768ac281481577f"
   head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
