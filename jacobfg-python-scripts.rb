@@ -4,11 +4,11 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '0.0.1'
+  version '0.0.2'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/0.0.1.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "c4f5d249fcb90d9c492748ed68f6950912badaa6252931f9c948b7662c6dd5b0"
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.2.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "25f9a24d7ba40425df991f3b04a94cef28b4d8af46889ab3216a560ac7a5880e"
   head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
@@ -28,6 +28,7 @@ class JacobfgPythonScripts < Formula
 
   # TODO: Add your package's tests here
   test do
+    system "#{bin}/cert-details"
     system "#{bin}/httpdecode"
     system "#{bin}/httpencode"
     system "#{bin}/totp"
