@@ -1,10 +1,13 @@
 require_relative './lib/download_release_strategy.rb'
 
 class JacobfgFittools < Formula
+
     desc "FIT Tools - java wrangler for Garmin/ANT FIT files"
     homepage "https://github.com/jacobfg/java-fitfile-tool"
-    url "https://github.com/jacobfg/java-fitfile-tool/releases/download/0.0.3/fittools-0.0.3.jar", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "8e40a0e969d07e5472bb71a51ca9edd1b7aafb6b774b0bb4022578a1ea5a44d0"
+
+    version "0.0.4"
+    url "https://github.com/jacobfg/java-fitfile-tool/releases/download/0.0.4/fittools-0.0.4.jar", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "2539ead30ca531c6a5d25e5d683768c28142006162c8acb352249272bc6693b9"
     head "https://github.com/jacobfg/java-fitfile-tool"
   
     bottle :unneeded
