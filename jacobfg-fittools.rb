@@ -5,9 +5,9 @@ class JacobfgFittools < Formula
     desc "FIT Tools - java wrangler for Garmin/ANT FIT files"
     homepage "https://github.com/jacobfg/java-fitfile-tool"
 
-    version "0.0.4"
-    url "https://github.com/jacobfg/java-fitfile-tool/releases/download/0.0.4/fittools-0.0.4.jar", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "2539ead30ca531c6a5d25e5d683768c28142006162c8acb352249272bc6693b9"
+    version "0.0.5"
+    url "https://github.com/jacobfg/java-fitfile-tool/releases/download/0.0.5/fittools-0.0.5.jar", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "1dcb52ff88b326439d9799bdd175cdc68bc321dd02666c34fcff57bef0dd9057"
     head "https://github.com/jacobfg/java-fitfile-tool"
   
     bottle :unneeded
@@ -19,6 +19,10 @@ class JacobfgFittools < Formula
         (bin/"fittools").write <<~EOS
             #!/bin/bash
             exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/fittools.jar" "$@"
+        EOS
+        (bin/"zwift-merge").write <<~EOS
+            #!/bin/bash
+            exec "#{Formula["openjdk"].opt_bin}/java" -jar "#{libexec}/fittools.jar" "zwift-merge" "$@"
         EOS
     end
 
