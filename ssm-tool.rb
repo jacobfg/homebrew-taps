@@ -4,7 +4,7 @@ class SsmTool < Formula
   homepage 'https://github.com/elpy1/ssm-tool'
   version '0.0.1'
 
-  desc "Python-based, generic static web site generator aimed at developers"
+  desc "AWS SSM and SSH toolkit. Access private AWS instances easily with no need to manually manage SSH keys on remote servers."
   url "https://github.com/elpy1/ssm-tool/archive/3a193d3b9ee2c511ab2d43653602ab1f758c42b9.zip", :using => CurlDownloadStrategy
   sha256 "25ec2c2055ffc2b4cd9cf694b7119494ff51cf57e951b408272ccd77a433d187"
   head "https://github.com/elpy1/ssh-over-ssm/scripts/archive/master.zip", :using => CurlDownloadStrategy
