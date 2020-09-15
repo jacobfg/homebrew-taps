@@ -6,8 +6,8 @@ class JacobfgBashScripts < Formula
   version "1.0.4"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/09ca6fc9a1918657c47c02eec35a8468ec691116.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "39c63f37ba6ed150de754d20debd014b8bc9026481be1bbf8f377c561ce776ea"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/e39756cce834ac582c0d1f054f32d0ffcbdc0b42.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "d5bbab49a19187cf68d59d1aa752a22764856755b7c203c641f02cee27280406"
 
   def install
     bin.install "brew-backup"
