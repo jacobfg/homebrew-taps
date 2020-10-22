@@ -25,7 +25,7 @@ class JacobfgAwscreds < Formula
 
   # TODO: Add your package's tests here
   test do
-    system "#{bin}/awscreds"
+    system "#{bin}/aws-creds"
   end
 
 end
