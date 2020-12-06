@@ -3,11 +3,11 @@ require_relative './lib/download_strategy.rb'
 class JacobfgBashScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45"
-  version "1.0.6"
+  version "1.0.7"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/e39756cce834ac582c0d1f054f32d0ffcbdc0b42.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "d5bbab49a19187cf68d59d1aa752a22764856755b7c203c641f02cee27280406"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/31c81859da19bdb34277db4d4ea7eaaac46ee09e.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "3ec79ce8515be7d411566f1c526c7f81608fa2167524653160135c686cb3de53"
 
   def install
     bin.install "brew-backup"
