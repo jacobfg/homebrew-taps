@@ -9,7 +9,7 @@ class JacobfgAwscreds < Formula
   desc "Wrapper for getting credentials from aws config & saml2aws"
   url "https://github.com/jacobfg/awscreds/archive/0.0.1.zip", :using => GitHubPrivateRepositoryDownloadStrategy
   sha256 "6b42879e6fb9ed6f09b14395a597e4c994a841461a2762ed53c2b7b4099def9f"
-  head "https://github.com/jacobfg/awscreds/archive/objectstyle.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  head "https://github.com/jacobfg/awscreds/archive/list_okta_roles.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   depends_on 'python'
   depends_on 'saml2aws'
