@@ -4,12 +4,12 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '0.0.9'
+  version '0.0.10'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/0.0.9.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "72cc3099d97ddec1e59e741a92af4594cfc01974d3951c854f2a255e6a871d97"
-  head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.10.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "255ebf34246cbe21c255be1492bae7e2bc86666d76ff949f19120d036227b0f9"
+  head "https://github.com/jacobfg/python-scripts/archive/main.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
   #       bottle block here.
