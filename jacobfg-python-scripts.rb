@@ -4,11 +4,11 @@ class JacobfgPythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '0.0.8'
+  version '0.0.9'
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/0.0.8.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "ae3042a955278f8477f188854be49a864e5bf23bcd25d71a0fc65dd4677dd63f"
+  url "https://github.com/jacobfg/python-scripts/archive/0.0.9.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "72cc3099d97ddec1e59e741a92af4594cfc01974d3951c854f2a255e6a871d97"
   head "https://github.com/jacobfg/python-scripts/archive/master.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
