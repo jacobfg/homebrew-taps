@@ -6,15 +6,14 @@ class JacobfgBashScripts < Formula
   version "1.0.7"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/31c81859da19bdb34277db4d4ea7eaaac46ee09e.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "3ec79ce8515be7d411566f1c526c7f81608fa2167524653160135c686cb3de53"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/0a12ed02d089bdcdeae7a2266952766748c3a46a.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "cea0d55b44da02fd9010c023330ea0b31910c12218056364b130e3d2fae2b1cb"
 
   def install
     bin.install "brew-backup"
     bin.install "brew-latest"
     bin.install "jsondiff"
     bin.install "github-head-sha256"
-    bin.install "login-cleanup"
     bin.install "usb-backup"
   end
 
@@ -23,7 +22,6 @@ class JacobfgBashScripts < Formula
     system "#{bin}/brew-latest"
     system "#{bin}/jsondiff"
     system "#{bin}/github-head-sha256"
-    system "#{bin}/login-cleanup"
     system "#{bin}/usb-backup"
   end
 
