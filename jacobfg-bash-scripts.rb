@@ -3,7 +3,7 @@ require_relative './lib/download_strategy.rb'
 class JacobfgBashScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45"
-  version "1.0.7"
+  version "1.0.8"
 
   desc "Bash scripts"
   url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/0a12ed02d089bdcdeae7a2266952766748c3a46a.zip", :using => GitHubPrivateGistDownloadStrategy
