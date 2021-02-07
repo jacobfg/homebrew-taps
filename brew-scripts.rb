@@ -1,6 +1,6 @@
 require_relative './lib/download_strategy.rb'
 
-class JacobfgBrewScripts < Formula
+class BrewScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/727e697833ac570cdac25da98490832f"
   version "3"

@@ -1,6 +1,6 @@
 require_relative './lib/download_strategy.rb'
 
-class JacobfgBashScripts < Formula
+class BashScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45"
   version "1.0.8"
