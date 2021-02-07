@@ -12,20 +12,20 @@ class NullDownloadStrategy < AbstractFileDownloadStrategy
 
 end
 
-class KillRoguePinentry < Formula
+class KillTop < Formula
 
   homepage "https://gist.github.com/jacobfg/417e745354ac069af3e402c740ba3349"
   version "0.0.1"
 
-  desc "Kill Rogue pinentry processes"
+  desc "Kill long running top processes"
   url "empty", :using => NullDownloadStrategy
 
   depends_on "bash-scripts" => "0.0.3"
 
   def install
-    (bin+"_kill-rogue-pinentry").write <<~EOS
+    (bin+"_kill-top").write <<~EOS
         #!/bin/sh 
-        echo launchctl to kill rogue pinentry process
+        echo launchctl to kill long running top process
     EOS
   end
 
@@ -40,8 +40,8 @@ class KillRoguePinentry < Formula
           <key>ProgramArguments</key>
           <array>
             <string>#{HOMEBREW_PREFIX}/bin/kill-long-process</string>
-            <string>/usr/local/bin/pinentry-mac</string>
-            <string>60</string>
+            <string>top</string>
+            <string>12</string>
           </array>
           <key>EnvironmentVariables</key>
           <dict>
@@ -49,7 +49,7 @@ class KillRoguePinentry < Formula
             <string>/bin:/usr/bin:/usr/local/bin</string>
           </dict>
           <key>StartInterval</key>
-          <integer>60</integer>
+          <integer>12</integer>
         </dict>
       </plist>
     EOS
