@@ -1,6 +1,6 @@
 require_relative './lib/download_strategy.rb'
 
-class JacobfgKillRougePinentry < Formula
+class KillRougePinentry < Formula
 
   homepage "https://gist.github.com/jacobfg/417e745354ac069af3e402c740ba3349"
   version "0.0.1"
