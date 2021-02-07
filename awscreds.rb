@@ -1,6 +1,6 @@
 require_relative './lib/download_strategy.rb'
 
-class JacobfgAwscreds < Formula
+class Awscreds < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/awscreds'

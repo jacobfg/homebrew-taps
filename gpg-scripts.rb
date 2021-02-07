@@ -1,6 +1,6 @@
 require_relative './lib/download_strategy.rb'
 
-class JacobfgGpgScripts < Formula
+class GpgScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/2b7c86fbdbfdbbca271af9d295459433"
   version "1"
