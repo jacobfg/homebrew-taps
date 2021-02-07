@@ -15,7 +15,7 @@ end
 class KillRoguePinentry < Formula
 
   homepage "https://gist.github.com/jacobfg/417e745354ac069af3e402c740ba3349"
-  version "0.0.1"
+  version "0.0.2"
 
   desc "Kill Rogue pinentry processes"
   url "empty", :using => NullDownloadStrategy
