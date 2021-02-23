@@ -39,7 +39,7 @@ class LinkSshAuthSock < Formula
           <array>
             <string>/bin/sh</string>
             <string>-c</string>
-            <string>/bin/ln -sf $HOME/.gnupg/S.gpg-agent.ssh $SSH_AUTH_SOCK</string>
+            <string>/bin/ln -sf $(/usr/local/bin/gpgconf --list-dirs agent-ssh-socket 2>/dev/null) $SSH_AUTH_SOCK</string>
           </array>
           <key>RunAtLoad</key>
           <true/>
