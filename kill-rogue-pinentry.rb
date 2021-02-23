@@ -1,4 +1,4 @@
-# belw doesn't work with service, so including here
+# below doesn't work with service, so including here
 # require_relative './lib/download_strategy.rb'
 
 # Hacked empty
