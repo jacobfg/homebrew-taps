@@ -3,11 +3,11 @@ require_relative './lib/download_strategy.rb'
 class BashScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45"
-  version "1.0.14"
+  version "1.0.15"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/302f031a72f6dbfa4eeade0ff7a91b904c346935.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "cffe6ac5326f03aeb35fe4035f9b81ed4175f187b9124371a6025532b9a0193a"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/f4748bf6c8dd459c3d0c7264c2fcbe54fea0927e.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "0d2ea8a539de678a0e4d972a23622ab2ce0ae05d1f7806b5ea1fedd84e2c0630"
 
   depends_on "pinentry-mac"
   depends_on "terminal-notifier"
@@ -20,6 +20,7 @@ class BashScripts < Formula
     bin.install "usb-backup"
     bin.install "kill-long-process"
     bin.install "globalprotect"
+    bin.install "pinentry-auto"
   end
 
   test do
@@ -30,6 +31,7 @@ class BashScripts < Formula
     system "#{bin}/usb-backup"
     system "#{bin}/kill-long-process"
     system "#{bin}/globalprotect"
+    system "#{bin}/pinentry-auto"
   end
 
 end
