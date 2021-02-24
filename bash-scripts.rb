@@ -3,11 +3,11 @@ require_relative './lib/download_strategy.rb'
 class BashScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45"
-  version "1.0.16"
+  version "1.0.17"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/5209022c1abdf88bbd1668dd944e4a92df067f05.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "ded44d0b23b3fcaf7f7c15b7901e69a773e37b014de035fa1d94d5b1f2aad846"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/2ec8b3dc95af2e67ee3d9bb00eba784a43bee65d.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "3369d087d64d99a9a20365657a662d7a944b96535c6fe5144bfe73db17d28f11"
 
   depends_on "pinentry-mac"
   depends_on "terminal-notifier"
