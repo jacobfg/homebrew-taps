@@ -6,8 +6,8 @@ class BashScripts < Formula
   version "1.0.18"
 
   desc "Bash scripts"
-  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/e0b2633e2a40c83fb3d8056f5f02089b0d004836.zip", :using => GitHubPrivateGistDownloadStrategy
-  sha256 "ced441268cb5c864b3a48ad4325f65908d7215ef8b0ef8898102c2b5e44d28f4"
+  url "https://gist.github.com/jacobfg/5e507760cde9a1c7a21048f47db3af45/archive/401d025ad4a2b4e66df8ea372a81cd008a93e54f.zip", :using => GitHubPrivateGistDownloadStrategy
+  sha256 "06ec1fe794314e4ae2eceb60610d5ab0078d531e2367adff1a654a9b6b0f5a4b"
 
   depends_on "pinentry-mac"
   depends_on "terminal-notifier"
@@ -20,6 +20,7 @@ class BashScripts < Formula
     bin.install "usb-backup"
     bin.install "kill-long-process"
     bin.install "globalprotect"
+    bin.install "macbook-vnc"
   end
 
   test do
@@ -30,6 +31,7 @@ class BashScripts < Formula
     system "#{bin}/usb-backup"
     system "#{bin}/kill-long-process"
     system "#{bin}/globalprotect"
+    system "#{bin}/macbook-vnc"
   end
 
 end
