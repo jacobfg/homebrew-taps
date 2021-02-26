@@ -4,11 +4,11 @@ class Awscreds < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/awscreds'
-  version '0.0.2'
+  version '0.0.3'
 
   desc "Wrapper for getting credentials from aws config & saml2aws"
-  url "https://github.com/jacobfg/awscreds/archive/0.0.2.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "5f2be4024e704619042b9bab7b312930c66fbd065a1ec001ce19b98f23a3fb60"
+  url "https://github.com/jacobfg/awscreds/archive/0.0.3.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "b016e1c0e8a0d4e57f903ea4ab49c9b6128f6a4b781e4cc1fe45818afb6f5150"
   head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   depends_on 'python'
