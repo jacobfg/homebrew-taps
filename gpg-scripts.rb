@@ -3,12 +3,12 @@ require_relative './lib/download_strategy.rb'
 class GpgScripts < Formula
 
   homepage "https://gist.github.com/jacobfg/2b7c86fbdbfdbbca271af9d295459433"
-  version "2"
+  version "3"
 
   desc "Yubikey GPG/SSH homebrew scripts"
-  url "https://gist.github.com/jacobfg/2b7c86fbdbfdbbca271af9d295459433/archive/9f9102563614861c570cc5602fe1b1387ab6b3c7.zip"
+  url "https://gist.github.com/jacobfg/2b7c86fbdbfdbbca271af9d295459433/archive/a3b9f1886eacafcbef126a68d7825c3f46de2e6f.zip"
   # , :using => GitHubPrivateGistDownloadStrategy
-  sha256 "363f72f07c1e902504f6c0e46e707f6b4e7340d5364831dcaa92a0228ae09234"
+  sha256 "8cb143a8dfba27de5a98fddc1f4e244caffafd264dd1d6b8d18ef542df9fbac0"
 
   def install
     bin.install "gpg-switch-card"
