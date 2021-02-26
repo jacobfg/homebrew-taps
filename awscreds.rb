@@ -12,7 +12,7 @@ class Awscreds < Formula
   head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   depends_on 'python'
-  depends_on 'saml2aws'
+  depends_on 'versent/taps/saml2aws'
  
   def install
     venv = virtualenv_create(libexec, "python3")
