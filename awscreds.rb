@@ -11,7 +11,7 @@ class Awscreds < Formula
   sha256 "c22ab422deb152a52227bbf3e8bb449710c049fdc298e58bde0d85f0924abf44"
   head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
-  depends_on 'python'
+  depends_on 'python@3'
   depends_on 'saml2aws'
  
   def install

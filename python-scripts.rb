@@ -8,13 +8,13 @@ class PythonScripts < Formula
 
   desc "Python-based, generic static web site generator aimed at developers"
   url "https://github.com/jacobfg/python-scripts/archive/0.0.14.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "7e77b2b483c21ffc9ba7c82e16c9ca2f6d85d344fe6b4af27f092290aeac3be3"
+  sha256 "337da82dd0ab0ba380f431f67a0c3ae551550b66afd511babe3ff05dcce94ce7"
   head "https://github.com/jacobfg/python-scripts/archive/main.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   # TODO: If you're submitting an existing package, make sure you include your
   #       bottle block here.
 
-  depends_on 'python'
+  depends_on 'python@3'
  
   def install
     venv = virtualenv_create(libexec, "python3")
@@ -26,12 +26,10 @@ class PythonScripts < Formula
   end
 
   # TODO: Add your package's tests here
+  # not checking for all bin scripts
   test do
-    system "#{bin}/cert-details"
     system "#{bin}/httpdecode"
     system "#{bin}/httpencode"
-    system "#{bin}/ini-print"
-    system "#{bin}/totp"
     # assert_match "topics", shell_output("#{bin}/aws help")
   end
 
