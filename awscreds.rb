@@ -4,7 +4,7 @@ class Awscreds < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/awscreds'
-  version '0.0.3'
+  version '0.0.4'
 
   desc "Wrapper for getting credentials from aws config & saml2aws"
   url "https://github.com/jacobfg/awscreds/archive/0.0.3.zip", :using => GitHubPrivateRepositoryDownloadStrategy
@@ -12,7 +12,7 @@ class Awscreds < Formula
   head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   depends_on 'python'
-  depends_on 'versent/taps/saml2aws'
+  depends_on 'saml2aws'
  
   def install
     venv = virtualenv_create(libexec, "python3")
