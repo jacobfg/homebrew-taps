@@ -7,8 +7,8 @@ class Awscreds < Formula
   version '0.0.4'
 
   desc "Wrapper for getting credentials from aws config & saml2aws"
-  url "https://github.com/jacobfg/awscreds/archive/0.0.3.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "c22ab422deb152a52227bbf3e8bb449710c049fdc298e58bde0d85f0924abf44"
+  url "https://github.com/jacobfg/awscreds/archive/0.0.4.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "b8eb2b5cc2aaf3c8c15a4ebf006dd7a8dd18a97b26403ffb52654c7c4f646970"
   head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
   depends_on 'python@3'
