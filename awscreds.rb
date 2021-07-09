@@ -1,31 +1,20 @@
 require_relative './lib/download_strategy.rb'
 
 class Awscreds < Formula
-  include Language::Python::Virtualenv
 
-  homepage 'https://github.com/jacobfg/awscreds'
-  version '0.0.14'
+  homepage "https://github.com/jacobfg/go-awscreds"
+  version "0.2.1"
 
-  desc "Wrapper for getting credentials from aws config & saml2aws"
-  url "https://github.com/jacobfg/awscreds/archive/refs/tags/0.0.14.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "70d23eb8d22c581837b4c6ee6bb2cfdf4aac775b0152edb2fa2c30e6eb249e0a"
-  head "https://github.com/jacobfg/awscreds/archive/develop.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  desc "AWS Tools for managing credentials"
+  url "https://api.github.com/repos/jacobfg/go-awscreds/releases/assets/39979041", :using => GitHubPrivateApiDownloadStrategy
+  sha256 "64bfb30d37cca1185af09595d118cecb8c5078e50f51a6f9eb91e16fae5ab9fa"
 
-  depends_on 'python@3'
-  depends_on 'saml2aws'
- 
   def install
-    venv = virtualenv_create(libexec, "python3")
-    system libexec/"bin/pip", "install", "-v", "-r", "requirements.txt",
-                              "--ignore-installed", buildpath
-    system libexec/"bin/pip", "uninstall", "-y", "awscreds"
-    venv.pip_install_and_link buildpath
-    # pkgshare.install "awscli/examples"
+    bin.install "awscreds"
   end
 
-  # TODO: Add your package's tests here
   test do
-    system "#{bin}/aws-creds"
+    system "#{bin}/awscreds", "--help"
   end
 
 end

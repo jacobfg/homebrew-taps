@@ -65,6 +65,32 @@ class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
 
 end
 
+class GitHubPrivateApiDownloadStrategy < GitHubPrivateRepositoryDownloadStrategy
+  def parse_url_pattern
+    unless match = url.match(%r{https://api.github.com/repos/([^/]+)/([^/]+)/releases/assets/([^/]+)})
+      raise CurlDownloadStrategyError, "Invalid url pattern for GitHub API Release Asset."
+    end
+
+    _, @owner, @repo, @assetid = *match
+  end
+
+  def download_url
+    "https://#{@github_token}@api.github.com/repos/#{@owner}/#{@repo}/releases/assets/#{@assetid}"
+  end
+
+  def validate_github_repository_access!
+    return # tbc
+  end
+
+  # private
+
+  def _fetch(url:, resolved_url:, timeout:)
+    p download_url
+    curl_download "-L", "-H", "Accept:application/octet-stream", download_url, to: temporary_path
+  end
+
+end 
+
 class GitHubPrivateGistDownloadStrategy < GitHubPrivateRepositoryDownloadStrategy
 
   def parse_url_pattern
@@ -83,7 +109,7 @@ class GitHubPrivateGistDownloadStrategy < GitHubPrivateRepositoryDownloadStrateg
     return # tbc
   end
 
-end 
+end
 
 
 # Hacked empty 
