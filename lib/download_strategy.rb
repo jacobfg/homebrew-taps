@@ -82,10 +82,9 @@ class GitHubPrivateApiDownloadStrategy < GitHubPrivateRepositoryDownloadStrategy
     return # tbc
   end
 
-  # private
+  private
 
   def _fetch(url:, resolved_url:, timeout:)
-    p download_url
     curl_download "-L", "-H", "Accept:application/octet-stream", download_url, to: temporary_path
   end
 
