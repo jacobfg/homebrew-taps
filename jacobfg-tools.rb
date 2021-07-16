@@ -14,16 +14,16 @@ class JacobfgTools < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jacobfg/jacobfg-tools/releases/download/0.0.0/jacobfg-tools_0.0.0_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ff45c27095423961e786cf969c05483e754e872f2d36315b6b64ea7f12bcb1ba"
+      sha256 "29cf48bd83a10473c486928c539a2b7d2dc6a9306bd54c8a787356d3b6232962"
     end
     if Hardware::CPU.arm?
       url "https://github.com/jacobfg/jacobfg-tools/releases/download/0.0.0/jacobfg-tools_0.0.0_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "064f80eef98d1fbf70be9a3c39d9c44e1e7d0471e4c9b73ea11ab98a30ac1eee"
+      sha256 "a2a2d76ae2255a366e5027ff93f2cede61e3fdae2f92945ee44b3ee2dd36b275"
     end
   end
 
   def install
-    bin.install "jacobfg-tools"
+    bin.install "helloworld"
   end
 
   test do
