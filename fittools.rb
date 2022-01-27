@@ -13,7 +13,7 @@ class Fittools < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.1/fittools_0.0.1_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6898eda124042cf71595a13c975be64ab5392fca206ea90fd077ab830c722812"
+      sha256 "c290f3077719cd109ec51173980ae7cc42be76dba55b86b61569e76abfc4a718"
 
       def install
         bin.install "fittools"
@@ -26,7 +26,7 @@ class Fittools < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.1/fittools_0.0.1_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "37c80667d64a2ccb39262a1541a97f8c4528e5efb94d71640c50eff0aecf1248"
+      sha256 "83d09aae92cc2950e400b7be93f441132ad84b7a628482e51f27b8d5c752e2b2"
 
       def install
         bin.install "fittools"
@@ -43,7 +43,7 @@ class Fittools < Formula
     system "#{bin}/fittools version"
     # test version to ensure that version number is embedded in binary
     # somehow add os/arch in version output
-    assert_match "fittools: 0.0.1 (4a9cc3a)", shell_output("#{bin}/fittools version")
+    assert_match "fittools: 0.0.1 (16193da)", shell_output("#{bin}/fittools version")
     # assert_match "built by #{tap.user}", shell_output("#{bin}/fittools version")
   end
 end
