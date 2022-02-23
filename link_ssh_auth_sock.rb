@@ -6,7 +6,7 @@
 
 class LinkSshAuthSock < Formula
   homepage "https://gist.github.com/jacobfg/c8fafe53649b8f9fda634b978e58548e"
-  version "0.0.1"
+  version "0.0.2"
 
   desc "Link SSH Auth SOCK file for using in macOS GUI applications"
   url "https://gist.github.com/jacobfg/c8fafe53649b8f9fda634b978e58548e/archive/75404255034526c720145409d3ebc92f5d46ef0f.zip"
@@ -45,7 +45,7 @@ class LinkSshAuthSock < Formula
           <array>
             <string>/bin/sh</string>
             <string>-c</string>
-            <string>/bin/ln -sf $(/usr/local/bin/gpgconf --list-dirs agent-ssh-socket 2>/dev/null) $SSH_AUTH_SOCK</string>
+            <string>/bin/ln -sf $(/opt/homebrew/bin/gpgconf --list-dirs agent-ssh-socket 2>/dev/null) $SSH_AUTH_SOCK</string>
           </array>
           <key>RunAtLoad</key>
           <true/>
