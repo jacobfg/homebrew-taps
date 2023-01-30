@@ -6,14 +6,14 @@ require_relative "./lib/github_private_strategy.rb"
 class Fittools < Formula
   desc "CLI tools for working with FIT files"
   homepage "https://github.com/jacobfg/fittools-golang"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache-2.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.2/fittools_0.0.2_darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "fc477ea27b24bc21cfbfc0ef612ad265543f9ff1280cac8bcf2db8284974e0d7"
+      url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.3/fittools_0.0.3_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "57bb429334fbdd622492e4b2684cd81a5d1fee16b5c4bb36e6631301e539610b"
 
       def install
         bin.install "fittools"
@@ -25,8 +25,8 @@ class Fittools < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.2/fittools_0.0.2_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0d7792adc7f423cac03dc359e2352d3c8f7886d517ef8f69f43ca04b66696bd5"
+      url "https://github.com/jacobfg/fittools-golang/releases/download/0.0.3/fittools_0.0.3_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e37afa78c38958ec584d50e828b0f2d1479e031966acadfcf6f7ae74cedbf03b"
 
       def install
         bin.install "fittools"
@@ -43,7 +43,7 @@ class Fittools < Formula
     system "#{bin}/fittools version"
     # test version to ensure that version number is embedded in binary
     # somehow add os/arch in version output
-    assert_match "fittools: 0.0.2 (a33ccf8)", shell_output("#{bin}/fittools version")
+    assert_match "fittools: 0.0.3 (092bf20)", shell_output("#{bin}/fittools version")
     # assert_match "built by #{tap.user}", shell_output("#{bin}/fittools version")
   end
 end
