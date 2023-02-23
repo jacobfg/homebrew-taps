@@ -17,10 +17,10 @@ class LinkSshAuthSock < Formula
 
   service do
     run [
-      "sh", "-c", "ln", "-sf", "$(gpgconf --list-dirs agent-ssh-socket 2>/dev/null)", "$SSH_AUTH_SOCK"
+      "sh", "-c", "ln -sf $(gpgconf --list-dirs agent-ssh-socket 2>/dev/null) $SSH_AUTH_SOCK"
     ]
     require_root false
-    environment_variables PATH: HOMEBREW_PREFIX/"bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+    # environment_variables PATH: HOMEBREW_PREFIX/"bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     environment_variables PATH: std_service_path_env
   end
 end
