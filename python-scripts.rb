@@ -142,8 +142,8 @@ class PythonScripts < Formula
     venv.pip_install resources
 
     # HACK - resources above don't compile and can't find a way to use whell (whl)
-    # system libexec/"bin/python", "-m", "pip", "install", "-v", "setuptools==69.2.0", buildpath
     system libexec/"bin/python", "-m", "pip", "install", "-v", "-r", "requirements.txt", buildpath
+    system libexec/"bin/python", "-m", "pip", "uninstall", "-y", "python-scripts"
 
     # `pip_install_and_link` takes a look at the virtualenv's bin directory
     # before and after installing its argument. New scripts will be symlinked
