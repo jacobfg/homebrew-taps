@@ -4,7 +4,7 @@ class PythonScripts < Formula
   include Language::Python::Virtualenv
 
   homepage 'https://github.com/jacobfg/python-scripts'
-  version '0.0.20'
+  version '0.0.21'
 
   depends_on "python@3.11"
   depends_on "cryptography"
@@ -14,14 +14,14 @@ class PythonScripts < Formula
   end
 
   desc "Python-based, generic static web site generator aimed at developers"
-  url "https://github.com/jacobfg/python-scripts/archive/refs/tags/0.0.20.zip", :using => GitHubPrivateRepositoryDownloadStrategy
-  sha256 "2234655923c91738441d04cb8792eefe165ccc5d9b786a05b7ccdc7ac528d3ae"
+  url "https://github.com/jacobfg/python-scripts/archive/refs/tags/0.0.21.zip", :using => GitHubPrivateRepositoryDownloadStrategy
+  sha256 "503ffffe5583af2378cb690ca0d52721b6161dfc9311a12428f15bba0532516d"
   head "https://github.com/jacobfg/python-scripts/archive/main.zip", :using => GitHubPrivateRepositoryDownloadStrategy
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
-    sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
-  end
+  # resource "setuptools" do
+  #   url "https://files.pythonhosted.org/packages/4d/5b/dc575711b6b8f2f866131a40d053e30e962e633b332acf7cd2c24843d83d/setuptools-69.2.0.tar.gz"
+  #   sha256 "0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e"
+  # end
 
   # resource "applescript" do
   #   url "https://files.pythonhosted.org/packages/ae/f2/90f877ad4f50d1b577b52f06ffb1b8b9bbc9add59c60db2c7331536ee02d/applescript-2021.2.9.tar.gz"
@@ -93,6 +93,11 @@ class PythonScripts < Formula
   #   sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
   # end
 
+  # resource "json5" do
+  #   url "https://files.pythonhosted.org/packages/3f/79/728d699a73aaa717d833caeec95e2b0c4f91aa6ee231977853d96a9d4157/json5-0.9.24.tar.gz"
+  #   sha256 "0c638399421da959a20952782800e5c1a78c14e08e1dc9738fa10d8ec14d58c8"
+  # end
+
   def install
     File.open(File.join(buildpath, 'setup.py'), 'w') do |f|
       f << <<~HEREDOC
@@ -107,7 +112,7 @@ class PythonScripts < Formula
       
       setup(
           name="python-scripts",
-          version="0.0.20",
+          version="0.0.21",
           author="Jacob Fleming-Gale",
           author_email="10949267+jacobfg@users.noreply.github.com",
           description="Random python scripts",
