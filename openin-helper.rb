@@ -2,10 +2,10 @@
 # doesn't include zap
 
 cask "openin-helper" do
-  version '2.0.0'
-  sha256 'b7d7cc09c7ee3bc8943e3319878aaff2f652dff4e4e5115cbe336e63e50608d8'
+  version '4.1.3'
+  sha256 '3196b3d63b30515a85137a609740753581d0d08bc7016a2374bc5c93b4560578'
 
-  url "https://loshadki.app/openin-helper/OpenIn%20Helper%202.0.0.dmg"
+  url "https://loshadki.app/openin-helper4/OpenIn%20Helper%204.1.3.dmg"
   name "https://loshadki.app"
   homepage "https://loshadki.app/openin-helper/"
 
