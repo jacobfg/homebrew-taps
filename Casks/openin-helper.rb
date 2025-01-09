@@ -1,11 +1,10 @@
-# https://formulae.brew.sh/cask/aws-vpn-client
 # doesn't include zap
 
 cask "openin-helper" do
   version '4.1.3'
-  sha256 '3196b3d63b30515a85137a609740753581d0d08bc7016a2374bc5c93b4560578'
+  sha256 'fa4339d914171cfa3ba424a232d95adf073122df4730ba0cfe5e4fd415c54653'
 
-  url "https://loshadki.app/openin-helper4/OpenIn%20Helper%204.1.3.dmg"
+  url "https://loshadki.app/openin-helper4/OpenIn%20Helper%204.2.2.zip"
   name "https://loshadki.app"
   homepage "https://loshadki.app/openin-helper/"
 
