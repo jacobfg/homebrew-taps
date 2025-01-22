@@ -3,10 +3,9 @@ class Mcallist < Formula
     desc "list macOS calendar events"
     homepage "https://github.com/jacobfg/mcal-list"
 
-    version "0.0.1"
-    url "https://github.com/jacobfg/mcal-list/releases/download/0.0.1/mcal-list"
-    #  :using => CurlDownloadStrategy
-    sha256 "5159847b652c779fd248de48564af51098852d90a3ea24b32e358bace20af01c"
+    version "0.0.2"
+    url "https://github.com/jacobfg/mcal-list/releases/download/0.0.2/mcal-list"
+    sha256 "17bf608075c8ee13842eaf5377cda3383f0172f3903cdffc9228815e1da4359b"
     head "https://github.com/jacobfg/mcal-list"
 
     # bottle :unneeded
