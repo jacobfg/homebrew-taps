@@ -1,0 +1,15 @@
+#!/bin/bash
+
+FILES=$(egrep '^  resource' ../finder-sidebar-editor.rb | awk '{print $2}' | tr -d '"')
+
+for F in $FILES ; do
+
+  FILE=$(ls $(echo $F | tr '-' '_')-*)
+  HASH=$(sha256sum $FILE | awk '{print $1}')
+  URL=$(tr ' ' '\n' < output.txt|egrep "https://[^ ]*/$FILE\$" | head -1)
+  printf '  resource "%s" do\n' $F
+  printf '    url "%s"\n' $URL
+  printf '    sha256 "%s"\n' $HASH
+  printf '  end\n'
+  printf '\n'
+done
